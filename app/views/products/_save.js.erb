@@ -1,0 +1,9 @@
+$('.errors').html("");
+<% if @product.errors.any? %>
+	<% @product.errors.full_messages.each do |error| %>
+		$('.errors').append($("<li/>").html("<%= error.html_safe %>"));
+	<% end %>
+<% else %>
+	$('#product-index').html("<%= escape_javascript(render 'index') %>");
+	$('.new-product').html("");
+<% end %>

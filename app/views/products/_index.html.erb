@@ -1,0 +1,8 @@
+<% @products.each do |product| %>
+	<tr>
+		<td><%= product.name %></td>
+		<td> <%= product.price %></td>
+		<td><%= link_to 'Edit product', edit_product_path(product), remote: true, class: 'btn btn-primary'%></td>
+		<td><%= link_to 'Delete product', delete_product_path(product), remote: true, class: 'btn btn-primary'%></td>
+	</tr>
+<% end %>

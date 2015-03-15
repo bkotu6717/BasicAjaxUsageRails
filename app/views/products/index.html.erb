@@ -1,0 +1,18 @@
+<h1> Listing available products </h1>
+
+<div class="container">
+	<div class="well">
+		<%= link_to 'New Product ', new_product_path, remote: true, class: 'btn btn-primary'%>
+	</div>
+	<ul class="errors"></ul>
+	<div class="new-product"></div>
+	<table class="table table-bordered">
+		<thead> 
+			<th>Product</th>
+			<th>Price</th>
+		</thead>
+		<tbody d="product-index">
+			 <%= render "index" %>
+		</tbody>
+	</table>
+</div>
